@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Release.Name }}-fluentd-certificate
+spec:
+  secretName: "{{ .Release.Name }}-{{ .Values.fluentd.secretName }}"
+  commonName: "fluentd.{{ .Values.dnsDomain }}"
+  subject:
+    countries:
+      - US
+  duration: {{ .Values.fluentd.duration }}
+  issuerRef:
+    name: {{ .Release.Name }}-selfsigned-issuer
+  isCA: true
