@@ -29,7 +29,7 @@ magma-certs-root-tls
 
 Check the certificate:
 ```bash
-kubectl get secrets magma-certs-admin-operator-tls \
+kubectl get secrets magma-certs-nms-tls \
   -o jsonpath='{.data.tls\.crt}' | \
   base64 -d | openssl x509 -text -noout -in -
 ```
