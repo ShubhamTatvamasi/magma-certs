@@ -19,12 +19,14 @@ helm install magma-certs .
 
 We will get all these secrets:
 ```
+magma-certs-admin-operator-pkcs12-password
 magma-certs-admin-operator-tls
 magma-certs-bootstrapper-key
 magma-certs-certifier-tls
 magma-certs-controller-tls
 magma-certs-fluentd-tls
 magma-certs-root-tls
+magma-certs-nms-tls
 ```
 
 Check the certificate:
