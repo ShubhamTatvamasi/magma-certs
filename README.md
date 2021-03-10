@@ -14,7 +14,8 @@ helm install cert-manager jetstack/cert-manager \
 
 Install magma-certs:
 ```bash
-helm install magma-certs .
+helm install magma-certs . \
+  --set dnsDomain=magma.shubhamtatvamasi.com
 ```
 
 We will get all these secrets:
@@ -29,7 +30,7 @@ magma-certs-root-tls
 magma-certs-nms-tls
 ```
 
-Check the certificate:
+Check x509 certificate:
 ```bash
 kubectl get secrets magma-certs-nms-tls \
   -o jsonpath='{.data.tls\.crt}' | \

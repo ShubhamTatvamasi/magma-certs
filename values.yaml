@@ -1,4 +1,4 @@
-dnsDomain: magma.shubhamtatvamasi.com
+dnsDomain: localhost
 
 root:
   secretName: root-tls
