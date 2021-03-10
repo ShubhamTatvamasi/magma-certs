@@ -11,3 +11,9 @@ spec:
   duration: {{ .Values.adminOperator.duration }}
   issuerRef:
     name: {{ .Release.Name }}-certifier-issuer
+  keystores:
+    pkcs12:
+      create: true
+      passwordSecretRef:
+        key: password
+        name: {{ .Release.Name }}-admin-operator-pkcs12-password

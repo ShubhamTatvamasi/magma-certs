@@ -29,3 +29,5 @@ adminOperator:
   secretName: admin-operator-tls
   # 10 years
   duration: 87600h
+  pkcs12:
+    password: password

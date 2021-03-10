@@ -33,3 +33,10 @@ kubectl get secrets magma-certs-nms-tls \
   -o jsonpath='{.data.tls\.crt}' | \
   base64 -d | openssl x509 -text -noout -in -
 ```
+
+Get pkcs12 certificate:
+```bash
+kubectl get secrets magma-certs-admin-operator-tls \
+  -o jsonpath='{.data.keystore\.p12}' | base64 -d | \
+  openssl pkcs12 -nodes -passin pass:"password" -in -
+```
