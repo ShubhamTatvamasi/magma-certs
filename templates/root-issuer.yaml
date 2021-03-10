@@ -4,4 +4,4 @@ metadata:
   name: {{ .Release.Name }}-root-issuer
 spec:
   ca:
-    secretName: "{{ .Release.Name }}-{{ .Values.root.secretName }}"
+    secretName: "{{ .Release.Name }}-root-tls"

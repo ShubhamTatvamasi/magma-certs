@@ -1,33 +1,5 @@
 dnsDomain: localhost
 
-root:
-  secretName: root-tls
-  # 10 years
-  duration: 87600h
-
-nms:
-  secretName: nms-tls
-  # 10 years
-  duration: 87600h
-
-controller:
-  secretName: controller-tls
-  # 10 years
-  duration: 87600h
-
-fluentd:
-  secretName: fluentd-tls
-  # 10 years
-  duration: 87600h
-
-certifier:
-  secretName: certifier-tls
-  # 10 years
-  duration: 87600h
-
 adminOperator:
-  secretName: admin-operator-tls
-  # 10 years
-  duration: 87600h
   pkcs12:
     password: password

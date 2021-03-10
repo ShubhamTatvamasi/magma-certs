@@ -3,12 +3,12 @@ kind: Certificate
 metadata:
   name: {{ .Release.Name }}-admin-operator-certificate
 spec:
-  secretName: "{{ .Release.Name }}-{{ .Values.adminOperator.secretName }}"
+  secretName: "{{ .Release.Name }}-admin-operator-tls"
   commonName: "admin_operator"
   subject:
     countries:
       - US
-  duration: {{ .Values.adminOperator.duration }}
+  duration: 87600h
   issuerRef:
     name: {{ .Release.Name }}-certifier-issuer
   keystores:

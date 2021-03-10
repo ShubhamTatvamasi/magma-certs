@@ -3,12 +3,12 @@ kind: Certificate
 metadata:
   name: {{ .Release.Name }}-nms-certificate
 spec:
-  secretName: "{{ .Release.Name }}-{{ .Values.nms.secretName }}"
+  secretName: "{{ .Release.Name }}-nms-tls"
   commonName: "*.{{ .Values.dnsDomain }}"
   subject:
     countries:
       - US
-  duration: {{ .Values.nms.duration }}
+  duration: 87600h
   issuerRef:
     name: {{ .Release.Name }}-root-issuer
   dnsNames:

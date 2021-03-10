@@ -3,12 +3,12 @@ kind: Certificate
 metadata:
   name: {{ .Release.Name }}-controller-certificate
 spec:
-  secretName: "{{ .Release.Name }}-{{ .Values.controller.secretName }}"
+  secretName: "{{ .Release.Name }}-controller-tls"
   commonName: "*.{{ .Values.dnsDomain }}"
   subject:
     countries:
       - US
-  duration: {{ .Values.controller.duration }}
+  duration: 87600h
   issuerRef:
     name: {{ .Release.Name }}-root-issuer
   dnsNames:
