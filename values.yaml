@@ -5,6 +5,11 @@ root:
   # 10 years
   duration: 87600h
 
+nms:
+  secretName: nms-tls
+  # 10 years
+  duration: 87600h
+
 controller:
   secretName: controller-tls
   # 10 years
