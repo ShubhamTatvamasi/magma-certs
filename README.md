@@ -33,8 +33,8 @@ magma-certs-nms-tls
 Check x509 certificate:
 ```bash
 kubectl get secrets magma-certs-nms-tls \
-  -o jsonpath='{.data.tls\.crt}' | \
-  base64 -d | openssl x509 -text -noout -in -
+  -o jsonpath='{.data.tls\.crt}' | base64 -d | \
+  openssl x509 -text -noout -in -
 ```
 
 Check pkcs12 certificate:
