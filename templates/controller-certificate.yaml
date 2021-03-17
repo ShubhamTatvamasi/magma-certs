@@ -8,9 +8,13 @@ spec:
   subject:
     countries:
       - US
-  duration: 87600h
+  duration: {{ .Values.duration }}
   issuerRef:
+{{- if .Values.controller.customIssuer }}
+    name: {{ .Values.controller.customIssuer }}
+{{- else }}
     name: {{ .Release.Name }}-root-issuer
+{{- end }}
   dnsNames:
   - "*.{{ .Values.dnsDomain }}"
   - "*.nms.{{ .Values.dnsDomain }}"

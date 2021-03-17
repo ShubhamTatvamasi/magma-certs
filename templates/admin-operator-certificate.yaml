@@ -8,9 +8,13 @@ spec:
   subject:
     countries:
       - US
-  duration: 87600h
+  duration: {{ .Values.duration }}
   issuerRef:
+{{- if .Values.adminOperator.customIssuer }}
+    name: {{ .Values.adminOperator.customIssuer }}
+{{- else }}
     name: {{ .Release.Name }}-certifier-issuer
+{{- end }}
   keystores:
     pkcs12:
       create: true

@@ -1,5 +1,5 @@
 apiVersion: v2
-name: magma-certs
+name: certs
 description: A Helm chart for Magma Certificates
 
 type: application
